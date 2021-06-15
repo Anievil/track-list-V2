@@ -10,42 +10,12 @@ import Login from './pages/Login/Login'
 import Registration from './pages/Regestration/Registration'
 import './index.css'
 import CONSTANTS from './constants'
-import {userData} from './actions/actionCreator'
+import { userData } from './actions/actionCreator'
 import { connect } from 'react-redux'
+import UserMenu from './components/Header/UserMenu/UserMenu'
 
 function App(props) {
   const [token, setToken] = useState(window.localStorage.getItem(CONSTANTS.ACCESS_TOKEN));
-  const logoutButton = () => {
-    const userData = JSON.parse(window.localStorage.getItem('userData'))
-    props.setUserData(userData)
-    return <div className='menuButton'>
-      <div className='openButton' onClick={openMenu}>
-        <p>Hi, {userData[0].name}</p>
-        <div className='openButtonImg' />
-      </div>
-      
-      <div className='link' onClick={logOut}>LogOut</div>
-      <div className='link'><a href='/registrationnewuser'> Новий <br />користувач </a></div>
-    </div>
-  }
-
-  const openMenu = (e) =>{
-    e.preventDefault()
-    const button = e.target.querySelector('.openButtonImg')
-    if(button){
-      button.classList.toggle('openButtonImgActive')
-      const block = e.target.parentNode
-      block.classList.toggle('menuHeight')
-    }
-    else{
-      const block = e.target.parentNode
-      const mainBlock = e.target.parentNode.parentNode
-      const button = block.querySelector('.openButtonImg')
-      button.classList.toggle('openButtonImgActive')
-      mainBlock.classList.toggle('menuHeight')
-    }
-    
-  }
 
   const logOut = () => {
     localStorage.clear();
@@ -53,21 +23,21 @@ function App(props) {
     setToken(undefined)
     window.location.reload();
   }
-  
+
   return (
     <>
       <Canvas />
-      {token == undefined ? '' : logoutButton()}
+      {token == undefined ? '' : <UserMenu logOut={logOut} />}
       <BrowserRouter>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/registrationnewuser' component={Registration} />
-            <Route exact path='/admin' component={Login} />
-            <Route exact path='/search' component={TrackList} />
-            <Route exact path='/albums/:id' component={ArtistPage} />
-            <Route exact path='/band/:_id' component={BandInfo} />
-            <Route exact path='/bands' component={BandListPage} />
-          </Switch>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/registrationnewuser' component={Registration} />
+          <Route exact path='/admin' component={Login} />
+          <Route exact path='/search' component={TrackList} />
+          <Route exact path='/albums/:id' component={ArtistPage} />
+          <Route exact path='/band/:_id' component={BandInfo} />
+          <Route exact path='/bands' component={BandListPage} />
+        </Switch>
       </BrowserRouter>
     </>
   );

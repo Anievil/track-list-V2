@@ -1,0 +1,59 @@
+.menuButton{
+  position: absolute;
+  top: 30px;
+  left: 80px;
+  background-color: whitesmoke;
+  z-index: 2;
+  display: flex;
+}
+
+.openButton{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.openButton::after{
+  content: '';
+  display: inline-block;
+  background-image: url('../../../icons/open.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  transition: all .3s;
+}
+
+.open .openButton::after{
+  transform: rotate(270deg);
+}
+
+.linkList{
+  display: none;
+}
+
+.open .linkList{
+  display: flex;
+}
+
+.link{
+  display: flex;
+  border: 1px gray solid;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.link:hover{
+  text-decoration: underline;
+}
+
+a, a:active{
+  color: #000;
+}
+
+.link + .link{
+  border-left: none; 
+}
