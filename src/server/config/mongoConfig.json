@@ -1,0 +1,12 @@
+{
+  "development": {
+    "database": "track-list",
+    "host": "localhost",
+    "port": 27017
+  },
+  "production": {
+    "database": "track-list",
+    "host": "localhost",
+    "port": 27017
+  }
+}
