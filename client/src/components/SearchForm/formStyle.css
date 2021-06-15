@@ -5,6 +5,7 @@
     margin: 100px auto;
     height: 5vh;
     width: 30vw;
+    min-width: 300px;
     border: 1px solid grey;
     border-radius: 15px;
     position: relative;
