@@ -147,7 +147,7 @@ const Canvas = props => {
 
     const canvas = canvasRef.current
     const context = canvas.getContext('2d')
-    draw(context, window.screen.width, window.screen.height)
+    draw(context, window.innerWidth , window.innerHeight)
   }, [])
 
   return <canvas className={styles.hid} width={`${window.screen.width}px`} height={`${window.screen.height}px`} ref={canvasRef} {...props} />
