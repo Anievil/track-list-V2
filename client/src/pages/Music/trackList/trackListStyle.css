@@ -140,6 +140,6 @@
         display: block;
     }
     .trackInfoAlbum, .trackInfoTrack{
-        line-height: auto;
+        line-height: 1;
     }
 }
