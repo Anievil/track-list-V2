@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* ----------блок для списка песен------------ */
+.treckList{
+    position: relative;
+    z-index: 19999;
+    width: 95vw;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.trackListLi{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    padding: 10px 50px;
+    flex-wrap: wrap;
+    align-items: center; 
+}
+
+.trackListLi:first-child{
+    padding: 20px;
+}
+
+.trackListLi:first-child, .trackListLi:first-child > p{ 
+    /* justify-content: space-between;  */
+    margin: 0 auto;
+    /* flex-basis: 20%; */
+    /* text-align: end; */
+    width: 90%; 
+}
+
+.trackListLi:first-child > .trackListP:first-child {
+    text-align: end;
+    padding: 0 5% 0 0;
+}
+
+.trackListLi:first-child > .trackListP:nth-child(2), .trackListLi:first-child > .trackListP:nth-child(3){
+    padding: 0 7% 0 0;
+}
+
+.trackListLi:first-child > .trackListP:last-child{
+    text-align: left;
+    padding-left: 2%;
+}
+
+.trackListLi:nth-child(2n){
+    background-color: #CCDFF0;
+}
+/* ----------стили для текста и изображений------------ */
+.trackListP{
+    flex-basis: 16.6%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.trackListImg{
+    width: auto;
+    height: auto;
+}
+
+/* ----------Кнопка для закрытия и открытия аккордеона------------ */
+.trackListButton{
+    background-image: url('../../../icons/open.svg');
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s ease;
+}
+
+.closeIcon{
+    transform: rotate(180deg);
+}
+
+/* ----------Закрытие аккордеона------------ */
+.visibilityHidden{
+    height: 0px;
+    visibility: hidden;
+}
+
+/* -----------блок с детальная информация о песне----------- */
+.trackInfo{
+    width: 600px;
+    margin: 0 14vw;
+}
+
+.trackInfoName{
+    display: flex;
+    align-items: center;
+    color: #454948;
+    margin-bottom: -15px 
+}
+
+.trackInfoNameImg{
+    margin-left: 15px;
+    height: 25px;
+    width: 25px;
+}
+
+.trackInfoBlock{
+    display: flex;
+    justify-content: space-between;
+}
+
+.trackInfoAlbum, .trackInfoTrack{
+    line-height: 5px;
+}
+
+/* -----------блок со спинер----------- */
+.load{
+    display: flex;
+    justify-content: center;
+}

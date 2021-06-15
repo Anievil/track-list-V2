@@ -1,0 +1,25 @@
+.header{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 21vw;
+    margin-top: 30px;
+}
+
+.link{
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.header > a > h2{
+    margin: 0;
+}
+
+.header > h2:hover{
+    color: blue
+}

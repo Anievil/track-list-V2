@@ -1,0 +1,107 @@
+.bandPage{
+    display: flex;
+    justify-content: space-around;
+}
+
+.iconEdit{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    
+}
+
+.editButton:hover, .send:hover{
+    transform: scale(1.1);
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.6); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.6);
+}
+
+button:focus{
+    outline:none
+}
+
+.infoCont{
+    margin: 100px 0;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    width: 40vw;
+    padding: 50px;
+    position: relative;
+    text-align: center;
+    height: fit-content;
+}
+
+.bandPic{
+    margin: 0 auto;
+    width: 60%;
+    
+}
+
+.editButton{
+    position: absolute;
+    right: 30px; top: 30px;
+    border: none;
+    padding: 10px;
+    border-radius: 10px 15px;
+    background-color: lightblue;
+    transition: all .5s;
+
+}
+
+.inputName, .inputPic, .inputDesc{
+    width: 250px;
+    padding: 5px;
+    border: none;
+    box-sizing: border-box;
+    transition: all .5s;
+    margin: 5px auto;
+    border: 1px black solid;
+    background-color: whitesmoke;
+}
+
+.inputPic{
+    border: none;
+    width: auto;
+}
+
+.inputDesc{
+    resize: none; 
+    width: 100%;
+    height: 100px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.send{
+    width: fit-content;
+    border: 0;
+    background-color: lightblue;
+    margin: 10px auto 0;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.5s;
+}
+
+@media(max-width: 600px) {
+    .bandPage{
+        display: inline;
+        width: 100vw;
+        overflow-y: hidden;
+    }
+
+    .infoCont{
+        margin: 100px auto;
+        background-color: whitesmoke;
+        border-radius: 20px;
+        width: 60%;
+        padding: 50px;
+        position: relative;
+        text-align: center;
+        height: fit-content;
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,45 @@
+.bandList{
+    position: relative;
+    z-index: 199999;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.bandCard{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    padding: 20px;
+    width: 280px;
+    min-height: 280px;
+    height: fit-content;
+    border: 1px grey solid;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+
+h2{
+    color: black;
+    text-decoration: none;
+}
+
+h2:active, :link{
+    color: black;
+    text-decoration: none;
+}
+
+.bandCard:hover{
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.6); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.6);
+}
+
+.bandPic{
+    width: 70%;
+    margin: 0 auto;
+}

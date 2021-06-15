@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* ----------блок для списка песен------------ */
+
+.menuButton{
+    position:fixed;
+    top: 0;
+    margin: auto;
+    z-index: 9999999;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.iconMenu{
+    width: 3vw;
+}
+
+.closeMenu{
+    position: fixed;
+    background-color: whitesmoke;
+    padding: 3vw 20px 20px !important;
+    z-index: 999999;
+}
+
+.closeMenu > * {
+    display: inline-block !important;
+    width: fit-content !important;
+    position: relative;
+}
+
+header{
+    position: relative;
+    z-index: 19999;
+    background-color: #454948;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: 30% 100%;
+    background-position-x: center;
+    text-align: center;
+}
+.headerTitle{
+    margin: 0 auto;
+    padding: 5% 30%;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    color: whitesmoke;
+}
+.profileImg{
+    width: 150%;
+    margin: 0 -25px
+}
+
+main{
+    position: relative;
+    z-index: 19999;
+    text-align: center;
+}
+
+main > h2 {
+    margin: 25px
+}
+
+.albumList{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.albumCard{
+    border: 1px gray solid;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0 auto 10px;
+    width: 16vw;
+    background-color: whitesmoke;
+}
+
+.albumCard:nth-child(2n){
+    background-color: #CCDFF0;
+}

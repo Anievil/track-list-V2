@@ -1,0 +1,106 @@
+.editMode{
+    width: fit-content;
+}
+
+.style{
+    width: fit-content;
+    padding: 20px;
+    background-color: whitesmoke;
+    position: fixed;
+    height: fit-content;
+    z-index: 999999999;
+    margin: auto;
+    left: 0; top: 0; right: 0; bottom: 0;
+    display: flex;
+    -webkit-box-shadow: 0px 0px 15px 7px rgba(0,0,0,0.89); 
+    box-shadow: 0px 0px 15px 7px rgba(0,0,0,0.89);
+}
+
+.imageWrapper, .description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.editMode .optionsButtonGroup{
+    position: static;
+    display: flex;
+    /* width: 60%; */
+    justify-content: space-around;
+}
+
+.optionsButtonGroup{
+    margin: 20px 0 0;
+}
+
+.editMode .optionsButtonGroup button{
+    display: flex;
+    align-items: center;
+    /* ju */
+}
+
+.bottomInfo{
+    margin-top: 30px;
+}
+
+.saveButton, .closeButton{
+    border: 1px whitesmoke solid;
+    border-radius: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    transition: all .5s;
+}
+
+.saveButton:hover, .closeButton:hover{
+    background-color: rgb(194, 226, 245);
+    border: 1px solid rgb(99, 136, 179);
+}
+
+.textArea{
+    width: 100%;
+}
+
+.imageInput{
+    border: 0;
+    margin: 5px auto;
+}
+
+.optionsButtonGroup{
+    position: absolute;
+}
+
+form{
+    background-color: whitesmoke;
+    border: none;
+}
+
+.topInfo{
+    display: flex;
+}
+
+.mainInfoBlock{
+    border: none !important;
+}
+
+.posterImage{
+    margin: 10px;
+    width: 20vw;
+}
+
+.shortInfo{
+    margin-top: 20px;
+}
+
+.inputBigForm{
+    resize: none; 
+    width: 260px;
+    height: 100px !important;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    box-sizing: border-box;
+    border: 1px grey solid;
+}

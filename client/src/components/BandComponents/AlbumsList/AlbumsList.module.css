@@ -1,0 +1,97 @@
+.albumsListCont{
+    position: relative;
+    z-index: 199999;
+    margin-top: 100px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    padding: 25px;
+    width: 30vw;
+    box-sizing: border-box;
+    height: 70vh;
+    overflow-y: scroll;
+}
+
+.albumsList{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.icons{
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.buttonAdd, .buttonDelete{
+    width: fit-content;
+    background-color: lightblue;
+    border: none;
+    border-radius: 10px 15px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.buttonAdd:hover, .buttonDelete:hover, .showButton:hover{
+    transform: scale(1.1);
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.6); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.6);
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.albumInfo{
+    margin: 15px 0 0 15px;
+    position: relative;
+    width: 100px;
+}
+
+.albumPic{
+    width: 100px;
+    height: 100px;
+}
+
+.albumName{
+    text-align: center;
+    margin: 5px 0 0;
+}
+
+.deleteIcon{
+    width: 40px;
+    height: auto;
+    position: absolute;
+    right: -15px; top: -15px;
+    cursor: pointer;
+}
+
+.showButton{
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px 15px;
+    background-color: lightblue;
+    transition: all .5s;
+}
+
+@media(max-width: 600px) {
+    .albumsListCont{
+        position: relative;
+        z-index: 199999;
+        margin: 100px auto 0;
+        border-radius: 20px;
+        background-color: whitesmoke;
+        padding: 25px;
+        width: 60%;
+        box-sizing: border-box;
+        height: 70vh;
+        overflow-y: scroll;
+    }
+}
