@@ -120,7 +120,6 @@
         display:none
     }
     .trackList{
-        display: block;
         padding: 0;
         margin: 0 auto;
     }
@@ -138,5 +137,6 @@
     }
     .trackListLi{
         position: relative;
+        display: block;
     }
 }
