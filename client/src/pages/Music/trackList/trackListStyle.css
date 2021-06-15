@@ -139,4 +139,7 @@
         position: relative;
         display: block;
     }
+    .trackInfoAlbum, .trackInfoTrack{
+        line-height: auto;
+    }
 }
