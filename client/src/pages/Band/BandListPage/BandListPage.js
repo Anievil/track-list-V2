@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Form from '../../../components/SearchForm/form'
 import { connect } from 'react-redux'
-import { getBandList, findBand } from '../../../actions/actionCreator'
+import { getBandList, findBand, clear } from '../../../actions/actionCreator'
 import AddBand from '../../../components/BandComponents/AddBand/AddBand'
 import BandList from '../../../components/BandComponents/BandList/BandList'
 import style from './BandListPage.module.css'
@@ -31,7 +31,7 @@ function BandListPage(props) {
             }
         }
     }
-
+    console.log(props)
     useEffect(() => {
         props.BandListRequest()
         if (props.userStore.data !== undefined) {
@@ -39,6 +39,8 @@ function BandListPage(props) {
                 setRole(props.userStore.data[0].role)
             }
         }
+        return () => {props.clearData()}
+
     }, [props.Store.status])
 
     return (
@@ -59,7 +61,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => (
     {
         BandListRequest: () => dispatch(getBandList()),
-        FindBandRequest: (data) => dispatch(findBand(data))
+        FindBandRequest: (data) => dispatch(findBand(data)),
+        clearData: () => dispatch(clear())
     }
 );
 

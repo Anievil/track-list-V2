@@ -1,5 +1,11 @@
 import ACTION from './actionTypes';
 
+export const clear = () => {
+    return {
+        type: ACTION.CLEAR_DATA,
+    }
+};
+
 export const userData = (data) => {
     return {
         type: ACTION.SET_USER_DATA,

@@ -8,6 +8,8 @@ import close from '../../../icons/closeIcon.svg'
 import add from '../../../icons/add.svg'
 import trash from '../../../icons/trash.svg'
 import CONSTANTS from '../../../constants'
+import loading from '../../../icons/loading.gif'
+import Loader from "react-loader-spinner";
 
 function AlbumsList({ data, ...props}) {
     const [isDeleteEvent, setIsDeleteEvent] = useState(false)
@@ -59,7 +61,7 @@ function AlbumsList({ data, ...props}) {
                         </li>
                     ))}
                 </ul>
-            : <h2>Ops... Albums not found or happened server error</h2>}
+            : <Loader className={style.loader} type="TailSpin" color="#00BFFF" height={100} width={100}/> }
         </div>
     )
 }

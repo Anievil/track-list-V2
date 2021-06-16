@@ -9,6 +9,7 @@ const initialState = {
 
 export default function (state = initialState, action) {
     switch (action.type) {
+        
         case ACTION.EDIT_BAND_INFO_SUCCESS: {
             return {
                 error: null,

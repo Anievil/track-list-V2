@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { findBand, editBandInfo } from '../../../actions/actionCreator'
+import { findBand } from '../../../actions/actionCreator'
 import style from './BandInfo.module.css'
 import AlbumsList from '../../../components/BandComponents/AlbumsList/AlbumsList'
 import Header from '../../../components/Header/Header'
@@ -44,6 +44,7 @@ function BandInfo(props) {
                 setRole(props.userStore.data[0].role)
             }
         }
+        // return () => {props.clearData()}
     }, [props.Store])
 
     const updatePic = (value) => {
@@ -52,7 +53,7 @@ function BandInfo(props) {
 
     return (
         <>
-            <Header backLink='/bands' />
+            <Header backLink='/bands' isBandInfo={true} />
             { props.Store.data ?
                 <div className={style.bandPage}>
                     <div className={style.infoCont}>
@@ -80,7 +81,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => (
     {
-        FindBandRequest: (data) => dispatch(findBand(data)),
+        FindBandRequest: (data) => dispatch(findBand(data)),       
     }
 );
 

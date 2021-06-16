@@ -1,4 +1,6 @@
 export default {
+    CLEAR_DATA: 'CLEAR_DATA',
+
     SET_USER_DATA: 'SET_USER_DATA',
     
     AUTH_ACTION_SUCCESS: 'AUTH_ACTION_SUCCESS',
