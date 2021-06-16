@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import style from './UserMenu.module.css'
+import { connect } from 'react-redux'
+import { userData } from '../../../actions/actionCreator'
 
-export default function UserMenu(props) {
+function UserMenu(props) {
     const [open, setOpen] = useState(false)
 
     const openMenu = () => {
@@ -9,7 +11,7 @@ export default function UserMenu(props) {
     }
 
     const userData = JSON.parse(window.localStorage.getItem('userData'))
-
+    props.setUserData(userData)
     return (
         <div className={style.menuButton + (open ? ' ' + style.open : '')}>
             <div className={style.openButton} onClick={openMenu}>
@@ -22,3 +24,12 @@ export default function UserMenu(props) {
         </div>
     )
 }
+
+const mapDispatchToProps = (dispatch) => (
+    {
+      setUserData: (data) => dispatch(userData(data)),
+    }
+  );
+  
+  export default connect(null, mapDispatchToProps)(UserMenu);
+  
