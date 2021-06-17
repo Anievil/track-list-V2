@@ -61,7 +61,7 @@ function AlbumsList({ data, ...props}) {
                         </li>
                     ))}
                 </ul>
-            : <Loader className={style.loader} type="TailSpin" color="#00BFFF" height={100} width={100}/> }
+            : <h3 className={style.loader}>Зачекайте будь ласка, дані скоріш за все завантажуються</h3> }
         </div>
     )
 }
